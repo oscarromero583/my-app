@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import boardImage from "./board.jpg";
+
+//create a component ......
+
+function Greetings() {
+  return <p>Hello there! Good morning</p>;
+}
+
+
+//Avatar component....
+function Avatar () {
+  return (
+    <img
+        className="card-image"
+        src={boardImage}
+        alt="avatar"
+        style={{ width: 100 }}
+      />
+  )
+}
+
+
+//profile card....
+function UserProfile() {
+  return (
+    <div className="card">
+      <Avatar/>
+      <div className="card-name">Name: Romero</div>
+      <div>Romero is a Good Sleeper</div>
+    </div>
+  );
+}
+
+//create our root component => App component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="main-page">
+      <Greetings />
+      <UserProfile />
+    </section>
   );
 }
 
