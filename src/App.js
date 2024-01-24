@@ -23,7 +23,7 @@ function App() {
     })
 
     return(
-  <section>{usersList}</section>
+  <section>{usersList} <ProfileCard/></section>
 )
 
   };
