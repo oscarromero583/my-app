@@ -1,55 +1,42 @@
 import React from "react";
-import boardImage from "./board.jpg";
-
-//create a component ......
-
-function Greetings() {
-  return <p>Hello there! Good morning</p>;
-}
-
-//Avatar component....
-function Avatar() {
-  return (
-    <img
-      className="card-image"
-      src={boardImage}
-      alt="avatar"
-      style={{ width: 100 }}
-    />
-  );
-}
-
-//profile card....
-function UserProfile() {
-  return (
-    <div className="card">
-      <Avatar />
-      <div className="card-name">Name: Romero</div>
-      <div>Romero is a Good Sleeper</div>
-    </div>
-  );
-}
-
-//list Item component...
-function ListComponent() {
-  return <li>Tesla</li>
-}
-
+import ProfileCard from "./components/ProfileCard";
+import userImage from "./user.jpeg";
 
 // create our rroot component => App component
 function App() {
-  const cars = ["Tesla", "Audi", "BMW", "Mercedes"];
+  const users = [{
+    name: "Oscar Obeta",
+    bio: "I am a web Developer",
+    avatar: userImage,
+  }, {
+      name: "Oscar Obeta",
+      bio: "I am a web Developer",
+      avatar: userImage,
+    }]
 
-  //create a list of cars....
-  const listItems = cars.map(car => {
-        return <li key={car}>{car}</li>
-  })
+    const usersList = users.map( user => {
+      return <div>
+        <img src="{user.avatar}" alt="Avatar" style={{width: 100}} />
+        <h3>{user.name}</h3>
+        <p>{user.bio}</p>
+      </div>
+    })
 
-  return (
-      <ol>
-        {listItems}
-      </ol>
-  );
-}
+    return(
+  <section>{usersList}</section>
+)
+
+  };
 
 export default App;
+
+
+
+
+// const cars = ['Tesla', 'Audi', 'BMW', 'Mercedes', 'Volvo'];
+//   const listItems = cars.map(item => {
+//     return <li key={item}>{item}</li>
+//   });
+//   return (
+//     <ol>{listItems}</ol>
+//   )
