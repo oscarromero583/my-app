@@ -1,32 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 
 // create our rroot component => App component
 function App() {
-  //state...
-  const [counter, setCounter] = useState(0);
-
-  // Handle Increament...
-  const handleIncreament = (event) => {
-    event.preventDefault();
-    setCounter(prev => prev + 1);
-  };
-
-  //Handle Decreament...
-  const handleDecreament = (event) => {
-    event.preventDefault();
-    setCounter(prev => prev - 1);
-  };
-
   //Render...
+
+
+//Handle Change...
+const handleChange = (event) => {
+  event.preventDefault();
+  console.log("Value :", event.target.value)
+};
+
+
   return (
-    <section className="counter-container">
-      <div className="counter-label">{counter}</div>
-      <button className="action-btn" onClick={handleIncreament}>
-        Increament 
-      </button>
-      <button className="action-btn" onClick={handleDecreament}>
-        Decreament
-      </button>
+    <section className="form-container">
+      <form action="" className="form">
+      <input type="text" placeholder="Enter you name" />
+      <input type="text" placeholder="Enter your email" />
+      <input type="text" placeholder="Enter your Address" />
+      <input type="text" placeholder="Enter your Phone number" />
+      <button type="submit">Submit</button>
+    </form>
     </section>
   );
 }
