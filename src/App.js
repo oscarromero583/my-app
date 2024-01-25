@@ -1,31 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 // create our rroot component => App component
 function App() {
   //state...
-  //const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(0);
 
   // Handle Increament...
   const handleIncreament = (event) => {
     event.preventDefault();
-    console.log("Increamenting...");
+    setCounter(prev => prev + 1);
   };
 
   //Handle Decreament...
   const handleDecreament = (event) => {
     event.preventDefault();
-    console.log("Decreamenting...");
+    setCounter(prev => prev - 1);
   };
 
   //Render...
   return (
     <section className="counter-container">
-      <div className="counter-label">0</div>
+      <div className="counter-label">{counter}</div>
       <button className="action-btn" onClick={handleIncreament}>
-        Increament
+        Increament 
       </button>
       <button className="action-btn" onClick={handleDecreament}>
-        Decreament{" "}
+        Decreament
       </button>
     </section>
   );
