@@ -8,4 +8,35 @@
   width: 100%;
 }
 
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
 
+.action-btn {
+  background-color: lightgreen;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.action-btn:hover {
+  background-color: blueviolet;
+  font-weight: 600;
+}
+
+.counter-label {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
