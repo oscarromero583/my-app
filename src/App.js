@@ -15,10 +15,10 @@ const handleChange = (event) => {
   return (
     <section className="form-container">
       <form action="" className="form">
-      <input type="text" placeholder="Enter you name" />
-      <input type="text" placeholder="Enter your email" />
-      <input type="text" placeholder="Enter your Address" />
-      <input type="text" placeholder="Enter your Phone number" />
+      <input onChange={handleChange} type="text" placeholder="Enter you name" />
+      <input onChange={handleChange} type="text" placeholder="Enter your email" />
+      <input onChange={handleChange} type="text" placeholder="Enter your Address" />
+      <input onChange={handleChange} type="text" placeholder="Enter your Phone number" />
       <button type="submit">Submit</button>
     </form>
     </section>
