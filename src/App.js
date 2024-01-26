@@ -2,18 +2,20 @@ import React from "react";
 
 // create our rroot component => App component
 
-
 // Car component...
-function Car({brand, color}) {
-  return <div className="car">
-    {`${color}, ${brand} `}
-  </div>
+function Car({ data }) {
+  return <div className="car">{`${data.color}, ${data.brand}, ${data.year} `}</div>;
 }
 function App() {
-
   return (
     <section className="main-container">
-     <Car brand="Tesla" color="Silver"/>
+      <Car
+        data={{
+          brand: "Ford",
+          color: "Red",
+          year: "2000",
+        }}
+      />
     </section>
   );
 }
