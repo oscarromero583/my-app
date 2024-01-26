@@ -1,25 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 // create our rroot component => App component
+
+
+// Car component...
+function Car({brand, color}) {
+  return <div className="car">
+    {`${color}, ${brand} `}
+  </div>
+}
 function App() {
-  const [state, setState] = useState("Magic is here");
-
-  // handle mouse over...
-  const handleMouseOver = () => {
-    setState("Welcome Home!");
-  };
-  setTimeout(() => {
-    setState("Magic is here");
-  }, 1000 )
-
-
-  //Render...handleMouseOver
 
   return (
-    <section className="main-conrainer">
-      <h1 onMouseOver={handleMouseOver} className="hover-me">
-        {state}
-      </h1>
+    <section className="main-container">
+     <Car brand="Tesla" color="Silver"/>
     </section>
   );
 }

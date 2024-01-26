@@ -88,3 +88,12 @@ button {
   padding: 30px;
   font-size: 30px;
 }
+
+.car{
+  background-color: #4caf50;
+  color: aliceblue;
+  text-align: center;
+  max-width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+}
