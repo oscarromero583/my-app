@@ -4,8 +4,9 @@ import React from "react";
 
 // Car component...
 function Car({ data }) {
-  return <div className="car">{`${data.color}, ${data.brand}, ${data.year} `}</div>;
-}
+  const { brand, color, year } = data;
+  return <div className="car">{`${color}, ${brand}, ${year} `}</div>;
+} 
 function App() {
   return (
     <section className="main-container">
