@@ -4,23 +4,23 @@ import React from "react";
 function App() {
   //Render...
 
-
-//Handle Change...
-const handleChange = (event) => {
-  event.preventDefault();
-  console.log("Value :", event.target.value)
-};
-
-
   return (
     <section className="form-container">
-      <form action="" className="form">
-      <input onChange={handleChange} type="text" placeholder="Enter you name" />
-      <input onChange={handleChange} type="text" placeholder="Enter your email" />
-      <input onChange={handleChange} type="text" placeholder="Enter your Address" />
-      <input onChange={handleChange} type="text" placeholder="Enter your Phone number" />
-      <button type="submit">Submit</button>
-    </form>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          const { name, email, address, tel } = event.target.elements;
+          console.log(name.value, email.value, address.value, tel.value);
+        }}
+        action=""
+        className="form"
+      >
+        <input type="text" placeholder="Enter you name" name="name" />
+        <input type="text" placeholder="Enter your email" name="email" />
+        <input type="text" placeholder="Enter your Address" name="address" />
+        <input type="tel" placeholder="Enter your Phone number" name="tel" />
+        <button type="submit">Submit</button>
+      </form>
     </section>
   );
 }
