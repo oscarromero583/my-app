@@ -33,7 +33,7 @@ function App() {
     return <Car data={car} />;
   });
 
-  return <section className="main-container">{listOfCars}</section>;
+  return <section  className="main-container">{listOfCars}</section>;
 }
 
 export default App;
