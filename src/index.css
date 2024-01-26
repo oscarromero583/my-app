@@ -80,3 +80,11 @@ button {
   max-width: 200px;
   width: 100%;
 }
+
+.main-conrainer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+}
