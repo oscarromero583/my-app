@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 // create our rroot component => App component
 function App() {
-  //Render...
+  const [state, setState] = useState("Magic is here");
+
+  // handle mouse over...
+  const handleMouseOver = () => {
+    setState("Welcome Home!");
+  };
+  setTimeout(() => {
+    setState("Magic is here");
+  }, 1000 )
+
+
+  //Render...handleMouseOver
 
   return (
     <section className="main-conrainer">
-      <h1 onMouseOver={(event) => {
-        console.log("YOu are hovering over me!")
-      }} className="hover-me">Hello World!</h1>
+      <h1 onMouseOver={handleMouseOver} className="hover-me">
+        {state}
+      </h1>
     </section>
   );
 }
