@@ -10,7 +10,9 @@ function App() {
         onSubmit={(event) => {
           event.preventDefault();
           const { name, email, address, tel } = event.target.elements;
-          console.log(name.value, email.value, address.value, tel.value);
+          alert(
+            `Hello ${name.value}! Your email is ${email.value}! Your address is ${address.value}! and your phone number is ${tel.value}`
+          );
         }}
         action=""
         className="form"
